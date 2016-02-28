@@ -1,0 +1,4 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <li>@Html.ActionLink("Тестове", "Index", "Tests", new { Area = "User" }, new { })</li>
+}

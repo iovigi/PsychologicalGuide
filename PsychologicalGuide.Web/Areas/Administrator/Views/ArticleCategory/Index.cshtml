@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ArticleCategory>
+@{
+    ViewBag.Title = "Thead Category";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-offset-6 col-xs-6">
+            <div>
+                <h2>Форум категории</h2>
+            </div>
+            <div>
+                @Html.Partial("_CreateArticleCategory", new CreateArticleCategoryViewModel())
+            </div>
+            <table class="table table-striped">
+                <tr>
+                    <th>
+                        Заглавие
+                    </th>
+                    <th>
+                        Изтриване
+                    </th>
+                </tr>
+                @foreach (var thing in Model)
+                {
+                    <tr>
+                        <td>
+                            @thing.Title
+                        </td>
+                        <td>
+                            @Html.ActionLink("Изтриване", "Delete", "ArticleCategory", new { Area = "Administrator", id = thing.Id }, new { })
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿@model CreateArticleCategoryViewModel
+
+@using (Html.BeginForm("Add", "ArticleCategory"))
+{
+    <div>
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Title)
+            @Html.EditorFor(x => x.Title)
+        </div>
+    </div>
+    <input type="submit" value="Създаване" />
+}

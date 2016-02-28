@@ -1,0 +1,4 @@
+﻿@if (Request.IsAuthenticated && (User.IsInRole(PsychologicalGuide.Common.GlobalConstants.EditorRoleName) || User.IsInRole(PsychologicalGuide.Common.GlobalConstants.AdministratorRoleName)))
+{
+    <li>@Html.ActionLink("Редакция", "Index", "EditorArticle", new { Area = "Editor" }, new { })</li>
+}

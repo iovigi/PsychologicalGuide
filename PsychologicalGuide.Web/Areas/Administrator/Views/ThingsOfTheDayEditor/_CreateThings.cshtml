@@ -1,0 +1,22 @@
+﻿@model PsychologicalGuide.Web.Areas.Administrator.Models.ThingsOfTheDay.CreateThingViewModel
+
+@using (Html.BeginForm("Add", "ThingsOfTheDayEditor"))
+{
+    <div>
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Content)
+            @Html.EditorFor(x => x.Content)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Author)
+            @Html.EditorFor(x => x.Author)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Date)
+            @Html.EditorFor(x => x.Date)
+        </div>
+    </div>
+        <input type="submit" value="Създаване" />
+}

@@ -1,0 +1,56 @@
+﻿@model PsychologicalGuide.Web.Models.Articles.ArticleIndexViewModel
+
+
+@{
+    ViewBag.Title = "Статии";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Статии
+                </div>
+                @foreach (var article in Model.Arctiles)
+                {
+
+                    <div class="panel-body">
+                        <a href="/Article/detail/@article.Id">
+                            <h3 class="panel-title">@article.Title</h3>
+                        </a>
+                    </div>
+                }
+            </div>
+
+            <nav>
+                <ul class="pagination">
+
+                    @if (Model.ActivePage > 1)
+                    {
+                        <li>
+                            <a href="/Article/Index/?Page=@(Model.ActivePage-1)" aria-label="Previous">
+                                <span aria-hidden="true">Prev</span>
+                            </a>
+                        </li>
+                    }
+
+                    @for (int i = 1; i < Model.TotalPage + 1; i++)
+                    {
+                        <li><a href="/Article/Index/?Page=@i">@i</a></li>
+                    }
+
+                    @if (Model.ActivePage < Model.TotalPage)
+                    {
+                        <li>
+                            <a href="/Article/Index/?Page=@(Model.ActivePage+1)" aria-label="Next">
+                                <span aria-hidden="true">Next</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+        <div class="col-xs-3"></div>
+    </div>
+</div>

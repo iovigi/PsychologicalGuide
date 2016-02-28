@@ -1,0 +1,29 @@
+﻿@model IEnumerable<PsychologicalGuide.Web.Models.Articles.ArticleListItemViewModel>
+
+@{
+    ViewBag.Title = "Начална страница";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-offset-3 col-xs-3">
+            <table class="table table-striped">
+                <tr>
+                    <th>
+                        Заглавие на Статия
+                    </th>
+                </tr>
+                @foreach (var article in Model)
+                {
+                    <tr>
+                        <td>
+                            <a href="/Article/detail/@article.Id">
+                                <h3 class="panel-title">@article.Title</h3>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

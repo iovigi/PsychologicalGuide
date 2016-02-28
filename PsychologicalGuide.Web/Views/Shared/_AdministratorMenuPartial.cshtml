@@ -1,0 +1,4 @@
+﻿@if (Request.IsAuthenticated && User.IsInRole(PsychologicalGuide.Common.GlobalConstants.AdministratorRoleName))
+{
+    <li>@Html.ActionLink("Administration", "Index", "HomeAdmin", new { Area = "Administrator" }, new { })</li>
+}

@@ -1,0 +1,18 @@
+﻿@model PsychologicalGuide.Web.Models.Articles.ArticleViewModel
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-6">
+            <h2>@Model.Title</h2>
+            <p>
+                @Html.Raw(Model.Content)
+            </p>
+        </div>
+        <div class="col-xs-3"></div>
+    </div>
+</div>
+

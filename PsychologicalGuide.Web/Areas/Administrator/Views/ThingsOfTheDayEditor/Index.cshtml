@@ -1,0 +1,55 @@
+﻿@model IEnumerable< PsychologicalGuide.Web.Areas.Administrator.Models.ThingsOfTheDay.ThingOfTheDayAdminViewModel>
+@{
+    ViewBag.Title = "Things of the day";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-offset-6 col-xs-6">
+            <div>
+                <h2>Мисъл на деня</h2>
+            </div>
+            <div>
+                @Html.Partial("_CreateThings", new PsychologicalGuide.Web.Areas.Administrator.Models.ThingsOfTheDay.CreateThingViewModel())
+            </div>
+            <table class="table table-striped">
+                <tr>
+                    <th>
+                        Съдържание
+                    </th>
+                    <th>
+                        Автор
+                    </th>
+                    <th>
+                        Дата
+                    </th>
+                    <th>
+                        Изтриване
+                    </th>
+                </tr>
+                @foreach (var thing in Model)
+                {
+                    <tr>
+                        <td>
+                            @thing.Content
+                        </td>
+                        <td>
+                            @thing.Author
+                        </td>
+                        <td>
+                            @thing.Date
+                        </td>
+                        <td>
+                            @Html.ActionLink("Изтриване", "Delete", "ThingsOfTheDayEditor", new { Area = "Administrator", id = thing.Id }, new { })
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Html.Partial("~/Views/Shared/EditorTemplates/_DateTimeScriptPartial.cshtml");
+}
+

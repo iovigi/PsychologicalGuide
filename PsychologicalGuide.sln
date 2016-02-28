@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologicalGuide.Web", "PsychologicalGuide.Web\PsychologicalGuide.Web.csproj", "{DE5F88EA-9ED6-4507-9478-4D2E9ACD7B10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologicalGuide.Data.Models", "PsychologicalGuide.Data.Models\PsychologicalGuide.Data.Models.csproj", "{0EE0FC57-5F52-4D51-839F-A8342ED7702E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologicalGuide.Data", "PsychologicalGuide.Data\PsychologicalGuide.Data.csproj", "{D73255E2-F176-4B29-9719-251DCCFCC4C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologicalGuide.Data.Services", "PsychologicalGuide.Data.Services\PsychologicalGuide.Data.Services.csproj", "{754EA375-DEF9-4252-A8EA-9E8A2C5C84CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologicalGuide.Common", "PsychologicalGuide.Common\PsychologicalGuide.Common.csproj", "{FD6838CD-03E8-473D-9F4F-340903D3CC85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologicalGuide.Web.Infrastructure", "PsychologicalGuide.Web.Infrastructure\PsychologicalGuide.Web.Infrastructure.csproj", "{61152F65-699F-45B1-A0A4-1EB86D74B610}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologicalGuide.Web.Models", "PsychologicalGuide.Web.Models\PsychologicalGuide.Web.Models.csproj", "{820329DD-A157-408F-911E-0D6C90C0A6E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologicalGuide.Web.Areas.Editor.Models", "PsychologicalGuide.Web.Areas.Editor.Models\PsychologicalGuide.Web.Areas.Editor.Models.csproj", "{4056F8B9-16C4-47D7-A75A-653285B10727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologicalGuide.Web.Areas.Administrator.Models", "PsychologicalGuide.Web.Areas.Administrator.Models\PsychologicalGuide.Web.Areas.Administrator.Models.csproj", "{E3F481EA-6143-4AC9-A459-CE2F2631E44E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE5F88EA-9ED6-4507-9478-4D2E9ACD7B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE5F88EA-9ED6-4507-9478-4D2E9ACD7B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE5F88EA-9ED6-4507-9478-4D2E9ACD7B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE5F88EA-9ED6-4507-9478-4D2E9ACD7B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE0FC57-5F52-4D51-839F-A8342ED7702E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE0FC57-5F52-4D51-839F-A8342ED7702E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE0FC57-5F52-4D51-839F-A8342ED7702E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE0FC57-5F52-4D51-839F-A8342ED7702E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D73255E2-F176-4B29-9719-251DCCFCC4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73255E2-F176-4B29-9719-251DCCFCC4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73255E2-F176-4B29-9719-251DCCFCC4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73255E2-F176-4B29-9719-251DCCFCC4C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{754EA375-DEF9-4252-A8EA-9E8A2C5C84CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754EA375-DEF9-4252-A8EA-9E8A2C5C84CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754EA375-DEF9-4252-A8EA-9E8A2C5C84CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754EA375-DEF9-4252-A8EA-9E8A2C5C84CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD6838CD-03E8-473D-9F4F-340903D3CC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD6838CD-03E8-473D-9F4F-340903D3CC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD6838CD-03E8-473D-9F4F-340903D3CC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD6838CD-03E8-473D-9F4F-340903D3CC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61152F65-699F-45B1-A0A4-1EB86D74B610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61152F65-699F-45B1-A0A4-1EB86D74B610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61152F65-699F-45B1-A0A4-1EB86D74B610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61152F65-699F-45B1-A0A4-1EB86D74B610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{820329DD-A157-408F-911E-0D6C90C0A6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{820329DD-A157-408F-911E-0D6C90C0A6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{820329DD-A157-408F-911E-0D6C90C0A6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{820329DD-A157-408F-911E-0D6C90C0A6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4056F8B9-16C4-47D7-A75A-653285B10727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4056F8B9-16C4-47D7-A75A-653285B10727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4056F8B9-16C4-47D7-A75A-653285B10727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4056F8B9-16C4-47D7-A75A-653285B10727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F481EA-6143-4AC9-A459-CE2F2631E44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F481EA-6143-4AC9-A459-CE2F2631E44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F481EA-6143-4AC9-A459-CE2F2631E44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F481EA-6143-4AC9-A459-CE2F2631E44E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

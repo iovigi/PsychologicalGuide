@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/bundles/Layout/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+</head>
+<body>
+    <div id="all">
+
+        <header>
+            @Html.Partial("_LoginPartial")
+
+            <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+                <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+                    <div class="container">
+                        <div class="navbar-header">
+
+                            <a class="navbar-brand home" href="@Url.Action("Index", "Home")">
+                                <img src="~/img/logo.png" alt="PsychologicalGuide Logo" class="hidden-xs hidden-sm">
+                            </a>
+                            <div class="navbar-buttons">
+                                <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <i class="fa fa-align-justify"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!--/.navbar-header -->
+
+                        <div class="navbar-collapse collapse" id="navigation">
+                            <ul class="nav navbar-nav navbar-center">
+                                <li>@Html.ActionLink("Начална страница", "Index", "Home", new { Area = "" }, new { })</li>
+                                <li>@Html.ActionLink("За сайта", "About", "Home", new { Area = "" }, new { })</li>
+                                <li>@Html.ActionLink("Статии", "Index", "Article", new { Area = "" }, new { })</li>
+                                <li>@Html.ActionLink("Форум", "Index", "Forum", new { Area = "" }, new { })</li>
+                                @Html.Partial("_UserMenuPartial")
+                                @Html.Partial("_EditorMenuPartial")
+                                @Html.Partial("_AdministratorMenuPartial")
+                            </ul>
+
+                        </div>
+                        <!--/.nav-collapse -->
+                        <!-- /#navbar -->
+
+                    </div>
+                </div>
+                <!-- *** NAVBAR END *** -->
+            </div>
+        </header>
+        <!-- *** LOGIN MODAL END *** -->
+
+        <section class="bar background-image-no-fixed-2 no-mb color-white text-center">
+            <div class="dark-mask"></div>
+            <div class="container height-700">
+                @Html.Action("GetThingOfTheDay", "ThingOfTheDay", new { Area = "" })
+            </div>
+        </section>
+
+        <section id="content" class="height-300">
+            @RenderBody()
+        </section>
+
+        <!-- *** COPYRIGHT ***
+        _________________________________________________________ -->
+
+        <div id="copyright">
+            <div class="container">
+                <div class="col-md-12">
+                    <p class="pull-left">&copy; 2015. Your company / name goes here</p>
+                    <p class="pull-right">
+                        Template by <a href="http://bootstrapious.com">Bootstrap 4 Themes</a> with support from <a href="http://kakusei.cz">Designové předměty</a>
+                        <!-- Not removing these links is part of the licence conditions of the template. Thanks for understanding :) -->
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!-- /#copyright -->
+        <!-- *** COPYRIGHT END *** -->
+
+
+
+    </div>
+    @Scripts.Render("~/bundles/Layout/js")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

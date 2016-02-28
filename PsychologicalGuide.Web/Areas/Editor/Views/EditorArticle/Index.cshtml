@@ -1,0 +1,38 @@
+﻿@model IEnumerable<PsychologicalGuide.Web.Models.Articles.ArticleListItemViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+            <div>
+                <h2>Статии</h2>
+            </div>
+            <div>
+                @Html.ActionLink("Създаване на статия", "Add", "EditorArticle", new { Area = "Editor" }, new { @class = "btn btn-default btn-lg" })
+            </div>
+            <table class="table table-striped">
+                <tr>
+                    <th>
+                        Заглавие
+                    </th>
+                    <th>
+                        Изтриване
+                    </th>
+                </tr>
+                @foreach (var article in Model)
+                {
+                    <tr>
+                        <td>
+                            @article.Title
+                        </td>
+                        <td>
+                            @Html.ActionLink("Изтриване", "Delete", "EditorArticle", new { Area = "Editor", id = article.Id }, new { })
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

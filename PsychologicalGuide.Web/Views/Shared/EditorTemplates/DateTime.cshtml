@@ -1,0 +1,4 @@
+﻿@model DateTime?
+
+@Html.TextBox("", String.Format("{0:yyyy-MM-dd}", Model.HasValue ? Model.Value : DateTime.Now), new { @class = "datepicker" })
+
