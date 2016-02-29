@@ -11,15 +11,17 @@ namespace PsychologicalGuide.Web.Controllers
 {
     public class ArticleController : BaseController
     {
-        private IArticleService service;
+        private IArticleService articleService;
+        private IArticleCategoryService articleCategoryService;
 
-        public ArticleController(IArticleService service)
+        public ArticleController(IArticleService articleService, IArticleCategoryService articleCategoryService)
         {
-            this.service = service;
+            this.articleService = articleService;
+            this.articleCategoryService = articleCategoryService;
         }
 
         // GET: Article
-        public ActionResult Index(string page)
+        public ActionResult Index(string page, string category, string searchWord)
         {
             int castPage = 1;
 
@@ -28,22 +30,35 @@ namespace PsychologicalGuide.Web.Controllers
                 castPage = 1;
             }
 
-            var articles = service.Get((castPage - 1), 6).To<ArticleViewModel>().ToList();
-            var total = (service.All().Count() / 6) + 1;
+            var articles = articleService.Get(searchWord, category, (castPage - 1), 6).To<ArticleViewModel>().ToList();
+            var total = (articleService.All().Count() / 6) + 1;
 
             var index = new ArticleIndexViewModel();
             index.Arctiles = articles;
             index.ActivePage = castPage;
             index.TotalPage = total;
+            index.Category = category;
+            index.SearchWord = searchWord;
+            var categories = this.articleCategoryService.All().Select(x => new SelectListItem() { Text = x.Name, Value = x.Name }).ToList();
+            categories.Add(new SelectListItem() { Text = "", Selected = true });
+
+            index.Categories = categories;
 
             return View(index);
         }
 
         public ActionResult Detail(int id = 1)
         {
-            var article = service.GetById(id);
+            var article = articleService.GetById(id);
 
             return View(Mapper.Map<ArticleViewModel>(article));
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult Comment(int id, string text)
+        {
+            return RedirectToAction("Detail", new { id = id });
         }
     }
 }

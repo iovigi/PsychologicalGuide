@@ -68,6 +68,7 @@
     <Compile Include="ArticleService.cs" />
     <Compile Include="IArticleService.cs" />
     <Compile Include="IArticleCategoryService.cs" />
+    <Compile Include="ICommentService.cs" />
     <Compile Include="IdentityRoleService.cs" />
     <Compile Include="IIdentityRoleService.cs" />
     <Compile Include="IThingsOfTheDayService.cs" />

@@ -18,6 +18,9 @@
                         Заглавие
                     </th>
                     <th>
+                        Редактиране
+                    </th>
+                    <th>
                         Изтриване
                     </th>
                 </tr>
@@ -26,6 +29,9 @@
                     <tr>
                         <td>
                             @article.Title
+                        </td>
+                        <td>
+                            @Html.ActionLink("Редактиране", "Edit", "EditorArticle", new { Area = "Editor", id = article.Id }, new { })
                         </td>
                         <td>
                             @Html.ActionLink("Изтриване", "Delete", "EditorArticle", new { Area = "Editor", id = article.Id }, new { })

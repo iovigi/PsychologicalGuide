@@ -12,6 +12,18 @@
                 <div class="panel-heading">
                     Статии
                 </div>
+                <div class="panel-body">
+                    @using (Html.BeginForm("Index", "Article", FormMethod.Get, new { id="formFilter", @class = "form-horizontal", role = "form" }))
+                    {
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Category)
+                            @Html.DropDownListFor(m => m.Category, Model.Categories, new { id = "categoriesList" })
+                            @Html.LabelFor(m=> m.SearchWord)
+                            @Html.EditorFor(m => m.SearchWord)
+                            <input type="submit" value="Търси" />
+                        </div>
+                    }
+                </div>
                 @foreach (var article in Model.Arctiles)
                 {
 
@@ -29,23 +41,22 @@
                     @if (Model.ActivePage > 1)
                     {
                         <li>
-                            <a href="/Article/Index/?Page=@(Model.ActivePage-1)" aria-label="Previous">
-                                <span aria-hidden="true">Prev</span>
-                            </a>
+                            @Html.ActionLink("Prev", "Index", new { Page = (Model.ActivePage - 1), Category = Model.Category, SearchWord = Model.SearchWord })
                         </li>
                     }
 
                     @for (int i = 1; i < Model.TotalPage + 1; i++)
                     {
-                        <li><a href="/Article/Index/?Page=@i">@i</a></li>
+                        <li>
+                            @Html.ActionLink(i.ToString(), "Index", new { Page = i, Category = Model.Category, SearchWord = Model.SearchWord })
+                        </li>
                     }
 
                     @if (Model.ActivePage < Model.TotalPage)
                     {
                         <li>
-                            <a href="/Article/Index/?Page=@(Model.ActivePage+1)" aria-label="Next">
-                                <span aria-hidden="true">Next</span>
-                            </a>
+
+                            @Html.ActionLink("Next", "Index", new { Page = (Model.ActivePage + 1), Category = Model.Category, SearchWord = Model.SearchWord })
                         </li>
                     }
                 </ul>
@@ -53,4 +64,13 @@
         </div>
         <div class="col-xs-3"></div>
     </div>
+
+    @section Scripts {
+        <script>
+            $('#categoriesList').on('change', function (event) {
+                var form = $(event.target).parents('form');
+                form.submit();
+            });
+        </script>
+    }
 </div>

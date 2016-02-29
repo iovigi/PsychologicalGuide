@@ -7,8 +7,8 @@
     <ProjectGuid>{E3F481EA-6143-4AC9-A459-CE2F2631E44E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PhychologicalGuide.Web.Areas.Administrator.Models</RootNamespace>
-    <AssemblyName>PhychologicalGuide.Web.Areas.Administrator.Models</AssemblyName>
+    <RootNamespace>PsychologicalGuide.Web.Areas.Administrator.Models</RootNamespace>
+    <AssemblyName>PsychologicalGuide.Web.Areas.Administrator.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

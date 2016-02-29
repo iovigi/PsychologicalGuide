@@ -6,29 +6,12 @@
 
     public class ArticleComment : BaseModel<int>
     {
-        private ICollection<Article> articles;
-
-        public ArticleComment()
-            :base()
-        {
-            this.articles = new HashSet<Article>();
-        }
-
-
         public string Content { get; set; }
         public string UserId { get; set; }
         public virtual User User { get; set; }
 
-        public ICollection<Article> Articles
-        {
-            get
-            {
-                return this.articles;
-            }
-            set
-            {
-                this.articles = value;
-            }
-        }
+        public int ArticleId { get; set; }
+
+        public virtual Article Article { get; set; }
     }
 }

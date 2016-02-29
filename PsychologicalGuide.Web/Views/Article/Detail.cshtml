@@ -9,10 +9,38 @@
         <div class="col-xs-6">
             <h2>@Model.Title</h2>
             <p>
-                @Html.Raw(Model.Content)
+                Category : @Model.Category , Date: @Model.CreatedOn
             </p>
+            <div class="article-content">
+                @Html.Raw(Model.Content)
+            </div>
+            <hr />
+            <div>
+                Comments:
+                <hr />
+                <div>User - Date</div>
+                <p>dsadsadasdasdasdasdasdsadsa</p>
+                <hr />
+                <div>User - Date</div>
+                <p>dsadsadasdasdasdasdasdsadsa</p>
+                <hr />
+            </div>
+
+            @using (Html.BeginForm("Comment", "Article", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                @Html.HiddenFor(m => m.Id)
+                <div class="form-group">
+                    @Html.TextArea("Text", new { @class = "form-control", rows = 6 })
+                </div>
+                <div class="form-group">
+                    <div class="pull-right">
+                        <input type="submit" class="btn btn-default" value="Коментирай" />
+                    </div>
+                </div>
+            }
         </div>
         <div class="col-xs-3"></div>
     </div>
 </div>
-

@@ -235,14 +235,14 @@
     <Compile Include="Areas\Administrator\Controllers\ArticleCategoryController.cs" />
     <Compile Include="Areas\Administrator\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\Administrator\Controllers\ThingsOfTheDayEditorController.cs" />
+    <Compile Include="Areas\Administrator\Controllers\UsersController.cs" />
     <Compile Include="Areas\Editor\Controllers\EditorArticleController.cs" />
     <Compile Include="Areas\Editor\EditorAreaRegistration.cs" />
-    <Compile Include="Areas\User\Controllers\BaseUserController.cs" />
-    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ThingOfTheDayController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1139,7 +1139,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Areas\Administrator\Views\web.config" />
-    <Content Include="Areas\User\Views\web.config" />
     <Content Include="Areas\Editor\Views\web.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -1346,7 +1345,6 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="Areas\User\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Editor\Views\_ViewStart.cshtml" />
     <Content Include="Content\fonts\FontAwesome.otf" />
     <Content Include="Content\fonts\fontawesome-webfont.woff" />
@@ -1354,9 +1352,6 @@
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <Content Include="Areas\Editor\Views\EditorArticle\Add.cshtml" />
     <Content Include="Areas\Editor\Views\EditorArticle\Index.cshtml" />
-    <Content Include="Areas\User\Views\Tests\Index.cshtml" />
-    <Content Include="Areas\User\Views\Tests\Detail.cshtml" />
-    <Content Include="Areas\User\Views\Shared\EditorTemplates\QuestionViewModel.cshtml" />
     <Content Include="Areas\Administrator\Views\ThingsOfTheDayEditor\Index.cshtml" />
     <Content Include="Areas\Administrator\Views\ThingsOfTheDayEditor\_CreateThings.cshtml" />
     <Content Include="Areas\Administrator\Views\ArticleCategory\Index.cshtml" />
@@ -1365,6 +1360,7 @@
     <Content Include="Areas\Administrator\Views\Shared\EditorTemplates\EditTestViewModel.cshtml" />
     <Content Include="Areas\Administrator\Views\Shared\EditorTemplates\CreateQuestionViewModel.cshtml" />
     <Content Include="Areas\Administrator\Views\Shared\EditorTemplates\CreateAnswerViewModel.cshtml" />
+    <Content Include="Areas\Editor\Views\EditorArticle\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap-hover-dropdown.js" />
     <Content Include="Scripts\bootstrap-wysiwyg-custom.js" />
@@ -1444,13 +1440,13 @@
     <Content Include="Views\Shared\EditorTemplates\_DateTimeScriptPartial.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <Content Include="Views\Shared\GetThingOfTheDay.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administrator\Views\Users\" />
     <Folder Include="Areas\Editor\Models\" />
     <Folder Include="Areas\Editor\Views\Shared\" />
-    <Folder Include="Areas\User\Views\BaseUser\" />
-    <Folder Include="Areas\User\Views\TestResults\" />
     <Folder Include="Content\Admin\assets\jquery-file-upload\server\php\files\thumbnail\" />
     <Folder Include="Scripts\admin\assets\jquery-file-upload\server\php\files\thumbnail\" />
     <Folder Include="Views\Base\" />

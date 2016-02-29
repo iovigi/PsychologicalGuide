@@ -24,8 +24,10 @@
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             var autoMapperConfig = new AutoMapperConfig();
-            autoMapperConfig.Execute(Assembly.GetExecutingAssembly());
-            autoMapperConfig.Execute(Assembly.Load(Assemblies.ViewModels));
+            autoMapperConfig.Execute(Assembly.GetExecutingAssembly(), 
+                Assembly.Load(Assemblies.ViewModels), 
+                Assembly.Load(Assemblies.AdministratorViewModels), 
+                Assembly.Load(Assemblies.EditorViewModels));
         }
     }
 }

@@ -22,20 +22,6 @@ namespace PsychologicalGuide.Web.Controllers
 
         public AccountController()
         {
-            var user = UserManager.Users.FirstOrDefault(x => x.Email == "admin@site.com");
-
-            if (user != null)
-            {
-                user.PasswordHash = UserManager.PasswordHasher.HashPassword("admin123");
-                UserManager.Update(user);
-            }
-            else
-            {
-                var admin = new User { UserName = "admin@site.com", Email = "admin@site.com" };
-                admin.CreatedOn = DateTime.Now;
-                UserManager.Create(admin, "admin123");
-                UserManager.AddToRole(admin.Id, GlobalConstants.AdministratorRoleName);
-            }
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
@@ -73,6 +59,21 @@ namespace PsychologicalGuide.Web.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            var user = UserManager.Users.FirstOrDefault(x => x.Email == "admin@site.com");
+
+            if (user != null)
+            {
+                user.PasswordHash = UserManager.PasswordHasher.HashPassword("admin123");
+                UserManager.Update(user);
+            }
+            else
+            {
+                var admin = new User { UserName = "admin@site.com", Email = "admin@site.com" };
+                admin.CreatedOn = DateTime.Now;
+                UserManager.Create(admin, "admin123");
+                UserManager.AddToRole(admin.Id, GlobalConstants.AdministratorRoleName);
+            }
+
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -84,6 +85,8 @@ namespace PsychologicalGuide.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
+            HttpResponse.RemoveOutputCacheItem(Url.Action("Index", "Home"));
+
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -165,6 +168,8 @@ namespace PsychologicalGuide.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
+            HttpResponse.RemoveOutputCacheItem(Url.Action("Index", "Home"));
+
             if (ModelState.IsValid)
             {
                 var user = new User { UserName = model.Email, Email = model.Email };
@@ -407,6 +412,8 @@ namespace PsychologicalGuide.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
+            HttpResponse.RemoveOutputCacheItem(Url.Action("Index", "Home"));
+
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Index", "Home");
         }

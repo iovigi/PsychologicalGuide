@@ -1,13 +1,13 @@
-﻿@model IEnumerable<ArticleCategory>
+﻿@model IEnumerable<PsychologicalGuide.Web.Areas.Administrator.Models.ArticleCategory.ArticleCategoryViewModel>
 @{
-    ViewBag.Title = "Thead Category";
+    ViewBag.Title = "Article Category";
 }
 
 <div class="container">
     <div class="row">
         <div class="col-xs-offset-6 col-xs-6">
             <div>
-                <h2>Форум категории</h2>
+                <h2>Статии категории</h2>
             </div>
             <div>
                 @Html.Partial("_CreateArticleCategory", new CreateArticleCategoryViewModel())
@@ -25,7 +25,7 @@
                 {
                     <tr>
                         <td>
-                            @thing.Title
+                            @thing.Name
                         </td>
                         <td>
                             @Html.ActionLink("Изтриване", "Delete", "ArticleCategory", new { Area = "Administrator", id = thing.Id }, new { })
