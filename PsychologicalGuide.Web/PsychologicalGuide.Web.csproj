@@ -1194,7 +1194,6 @@
     <Content Include="Content\Admin\assets\jquery-easy-pie-chart\jquery.easy-pie-chart.coffee" />
     <Content Include="Content\Admin\assets\jquery-easy-pie-chart\Makefile" />
     <Content Include="Content\Admin\assets\jquery-easy-pie-chart\Readme.md" />
-    <Content Include="Content\Admin\assets\jquery-file-upload\.DS_Store" />
     <Content Include="Content\Admin\assets\jquery-file-upload\.gitignore" />
     <Content Include="Content\Admin\assets\jquery-file-upload\blueimp-file-upload.jquery.json" />
     <Content Include="Content\Admin\assets\jquery-file-upload\CONTRIBUTING.md" />
