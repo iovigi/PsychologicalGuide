@@ -1296,10 +1296,6 @@
     <Content Include="Areas\Administrator\Views\ThingsOfTheDayEditor\_CreateThings.cshtml" />
     <Content Include="Areas\Administrator\Views\ArticleCategory\Index.cshtml" />
     <Content Include="Areas\Administrator\Views\ArticleCategory\_CreateArticleCategory.cshtml" />
-    <Content Include="Areas\Administrator\Views\Shared\EditorTemplates\CreateTestViewModel.cshtml" />
-    <Content Include="Areas\Administrator\Views\Shared\EditorTemplates\EditTestViewModel.cshtml" />
-    <Content Include="Areas\Administrator\Views\Shared\EditorTemplates\CreateQuestionViewModel.cshtml" />
-    <Content Include="Areas\Administrator\Views\Shared\EditorTemplates\CreateAnswerViewModel.cshtml" />
     <Content Include="Areas\Editor\Views\EditorArticle\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap-hover-dropdown.js" />
@@ -1381,6 +1377,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administrator\Views\Shared\EditorTemplates\" />
     <Folder Include="Areas\Administrator\Views\Users\" />
     <Folder Include="Areas\Editor\Models\" />
     <Folder Include="Areas\Editor\Views\Shared\" />
