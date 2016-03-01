@@ -1,4 +1,5 @@
-﻿using PsychologicalGuide.Data.Services;
+﻿using Microsoft.AspNet.Identity;
+using PsychologicalGuide.Data.Services;
 using PsychologicalGuide.Web.Infrastructure.Mapping;
 using PsychologicalGuide.Web.Models.Articles;
 using System;
@@ -60,6 +61,8 @@ namespace PsychologicalGuide.Web.Controllers
         [HttpPost]
         public ActionResult Comment(int id, string text)
         {
+            this.commentService.Add(id, text, this.User.Identity.GetUserId());
+
             return RedirectToAction("Detail", new { id = id });
         }
     }

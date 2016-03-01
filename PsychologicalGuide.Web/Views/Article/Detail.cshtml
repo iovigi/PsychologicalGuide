@@ -18,12 +18,13 @@
             <div>
                 Comments:
                 <hr />
-                <div>User - Date</div>
-                <p>dsadsadasdasdasdasdasdsadsa</p>
-                <hr />
-                <div>User - Date</div>
-                <p>dsadsadasdasdasdasdasdsadsa</p>
-                <hr />
+
+                @foreach(var comment in Model.Comments)
+                {
+                    <div>@comment.UserEmail - @comment.Date.ToString("G")</div>
+                    <p>@comment.Content</p>
+                    <hr />
+                }
             </div>
 
             @using (Html.BeginForm("Comment", "Article", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
