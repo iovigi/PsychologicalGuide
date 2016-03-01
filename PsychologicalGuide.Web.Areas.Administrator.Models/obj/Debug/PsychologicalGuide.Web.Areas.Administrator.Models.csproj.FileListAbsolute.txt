@@ -64,3 +64,4 @@ D:\Projects\PsychologicalGuide\PsychologicalGuide.Web.Areas.Administrator.Models
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Web.Areas.Administrator.Models\bin\Debug\PsychologicalGuide.Web.Areas.Administrator.Models.pdb
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Web.Areas.Administrator.Models\obj\Debug\PsychologicalGuide.Web.Areas.Administrator.Models.dll
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Web.Areas.Administrator.Models\obj\Debug\PsychologicalGuide.Web.Areas.Administrator.Models.pdb
+D:\Projects\PsychologicalGuide\PsychologicalGuide.Web.Areas.Administrator.Models\bin\Debug\PsychologicalGuide.Web.Areas.Administrator.Models.dll.config
