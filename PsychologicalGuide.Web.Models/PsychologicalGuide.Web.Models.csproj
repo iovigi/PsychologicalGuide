@@ -121,6 +121,7 @@
     <Compile Include="Articles\ArticleIndexViewModel.cs" />
     <Compile Include="Articles\ArticleListItemViewModel.cs" />
     <Compile Include="Articles\ArticleViewModel.cs" />
+    <Compile Include="Articles\CommentViewModel.cs" />
     <Compile Include="ManageViewModels.cs" />
     <Compile Include="Profiles\ProfileViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

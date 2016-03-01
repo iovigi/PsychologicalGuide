@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArticleService.cs" />
+    <Compile Include="CommentService.cs" />
     <Compile Include="IArticleService.cs" />
     <Compile Include="IArticleCategoryService.cs" />
     <Compile Include="ICommentService.cs" />

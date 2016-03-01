@@ -639,6 +639,9 @@
     <Content Include="Content\Admin\css\style.css" />
     <Content Include="Content\Admin\css\widgets.css" />
     <Content Include="Content\Admin\css\xcharts.min.css" />
+    <Content Include="Content\Admin\fonts\ElegantIcons.svg" />
+    <Content Include="Content\Admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -679,6 +682,7 @@
     <Content Include="img\chat-avatar.jpg" />
     <Content Include="img\chat-avatar2.jpg" />
     <Content Include="img\customSelect-arrow.gif" />
+    <Content Include="img\freud.jpg" />
     <Content Include="img\geekslabs.png" />
     <Content Include="img\Germany.png" />
     <Content Include="img\icons\line-icon-c.png" />
@@ -1297,6 +1301,16 @@
     <Content Include="Areas\Administrator\Views\ArticleCategory\Index.cshtml" />
     <Content Include="Areas\Administrator\Views\ArticleCategory\_CreateArticleCategory.cshtml" />
     <Content Include="Areas\Editor\Views\EditorArticle\Edit.cshtml" />
+    <Content Include="Content\Admin\fonts\ElegantIcons.eot" />
+    <Content Include="Content\Admin\fonts\ElegantIcons.ttf" />
+    <Content Include="Content\Admin\fonts\ElegantIcons.woff" />
+    <Content Include="Content\Admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Admin\fonts\FontAwesome.otf" />
+    <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap-hover-dropdown.js" />
     <Content Include="Scripts\bootstrap-wysiwyg-custom.js" />

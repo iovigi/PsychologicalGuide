@@ -13,11 +13,13 @@ namespace PsychologicalGuide.Web.Controllers
     {
         private IArticleService articleService;
         private IArticleCategoryService articleCategoryService;
+        private ICommentService commentService;
 
-        public ArticleController(IArticleService articleService, IArticleCategoryService articleCategoryService)
+        public ArticleController(IArticleService articleService, IArticleCategoryService articleCategoryService, ICommentService commentService)
         {
             this.articleService = articleService;
             this.articleCategoryService = articleCategoryService;
+            this.commentService = commentService;
         }
 
         // GET: Article

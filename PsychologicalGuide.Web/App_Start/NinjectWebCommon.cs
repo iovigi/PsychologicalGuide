@@ -77,6 +77,7 @@ namespace PsychologicalGuide.Web.App_Start
             kernel.Bind<IPasswordHasher>().To<PasswordHasher>();
             kernel.Bind<IIdentityRoleService>().To<IdentityRoleService>();
             kernel.Bind<IUserService>().To<UserService>();
+            kernel.Bind<ICommentService>().To<CommentService>();
         }
     }
 }
