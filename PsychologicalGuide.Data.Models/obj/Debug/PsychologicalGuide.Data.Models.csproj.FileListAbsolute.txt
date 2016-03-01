@@ -25,3 +25,4 @@ D:\Projects\PsychologicalGuide\PsychologicalGuide.Data.Models\bin\Debug\Microsof
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Data.Models\obj\Debug\PsychologicalGuide.Data.Models.dll
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Data.Models\obj\Debug\PsychologicalGuide.Data.Models.pdb
+D:\Projects\PsychologicalGuide\PsychologicalGuide.Data.Models\obj\Debug\PsychologicalGuide.Data.Models.csprojResolveAssemblyReference.cache

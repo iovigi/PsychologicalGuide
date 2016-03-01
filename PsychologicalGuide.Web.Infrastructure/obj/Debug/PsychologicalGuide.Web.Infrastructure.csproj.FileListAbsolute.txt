@@ -10,4 +10,3 @@ D:\Projects\PsychologicalGuide\PsychologicalGuide.Web.Infrastructure\bin\Debug\A
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Web.Infrastructure\bin\Debug\AutoMapper.xml
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Web.Infrastructure\obj\Debug\PsychologicalGuide.Web.Infrastructure.dll
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Web.Infrastructure\obj\Debug\PsychologicalGuide.Web.Infrastructure.pdb
-D:\Projects\PsychologicalGuide\PsychologicalGuide.Web.Infrastructure\obj\Debug\PsychologicalGuide.Web.Infrastructure.csprojResolveAssemblyReference.cache
