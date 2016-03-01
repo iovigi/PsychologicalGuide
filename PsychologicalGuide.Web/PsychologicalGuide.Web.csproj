@@ -1431,9 +1431,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Article\Index.cshtml" />
     <Content Include="Views\Article\Detail.cshtml" />
-    <Content Include="Views\Forum\Index.cshtml" />
-    <Content Include="Views\Forum\Create.cshtml" />
-    <Content Include="Views\Forum\Detail.cshtml" />
     <Content Include="Views\Shared\_EditorMenuPartial.cshtml" />
     <Content Include="Views\Shared\_UserMenuPartial.cshtml" />
     <Content Include="Views\Shared\_AdministratorMenuPartial.cshtml" />
