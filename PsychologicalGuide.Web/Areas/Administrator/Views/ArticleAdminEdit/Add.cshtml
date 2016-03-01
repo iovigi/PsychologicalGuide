@@ -1,0 +1,32 @@
+﻿@model PsychologicalGuide.Web.Areas.Administrator.Models.Article.CreateArticle
+
+@{
+    ViewBag.Title = "Създаване на статия";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-6">
+            <h2>Създаване на статия</h2>
+            @using (Html.BeginForm("Add", "ArticleAdminEdit", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", placeholder = "Заглавие" } })
+                @Html.DropDownListFor(m => m.CategoryId, Model.Categories, new { id = "categoriesList" })
+                <div class="form-group">
+                    @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control ckeditor", rows = "6" } })
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default" value="Създаване" />
+                </div>
+            }
+        </div>
+        <div class="col-xs-3"></div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/Edit/js")
+}
+

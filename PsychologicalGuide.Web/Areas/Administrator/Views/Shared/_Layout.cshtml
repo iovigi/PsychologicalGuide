@@ -40,7 +40,13 @@
                         @Html.ActionLink("Статии Категории", "Index", "ArticleCategory", new { Area = "Administrator" }, new { })
                     </li>
                     <li>
-                        @Html.ActionLink("Потребители", "Index", "ArticleCategory", new { Area = "Administrator" }, new { })
+                        @Html.ActionLink("Статии", "Index", "ArticleAdminEdit", new { Area = "Administrator" }, new { })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Потребители", "Index", "Users", new { Area = "Administrator" }, new { })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Коментари", "Index", "CommentEdit", new { Area = "Administrator" }, new { })
                     </li>
                 </ul>
                 <!-- sidebar menu end-->

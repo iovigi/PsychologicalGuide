@@ -1,0 +1,41 @@
+﻿@model IEnumerable<PsychologicalGuide.Web.Areas.Administrator.Models.Users.UserListItemViewModel>
+@{
+    ViewBag.Title = "Users";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-offset-6 col-xs-6">
+            <div>
+                <h2>Потребители</h2>
+            </div>
+            <table class="table table-striped">
+                <tr>
+                    <th>
+                        Потребител
+                    </th>
+                    <th>
+                        Редактиране
+                    </th>
+                    <th>
+                        Изтриване
+                    </th>
+                </tr>
+                @foreach (var thing in Model)
+                {
+                    <tr>
+                        <td>
+                            @thing.Email
+                        </td>
+                        <td>
+                            @Html.ActionLink("Редактиране", "Edit", "Users", new { Area = "Administrator", id = thing.Id }, new { })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Изтриване", "Delete", "Users", new { Area = "Administrator", id = thing.Id }, new { })
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

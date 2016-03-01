@@ -46,6 +46,14 @@ namespace PsychologicalGuide.Data.Services
             this.repository.SaveChanges();
         }
 
+        public void Edit(int id, string content)
+        {
+            var comment = this.repository.GetById(id);
+            comment.Content = content;
+            this.repository.Update(comment);
+            this.repository.SaveChanges();
+        }
+
         public ArticleComment GetById(int id)
         {
             return this.repository.GetById(id);

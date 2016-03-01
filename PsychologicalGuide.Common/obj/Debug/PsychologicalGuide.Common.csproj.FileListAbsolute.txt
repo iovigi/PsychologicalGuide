@@ -10,4 +10,3 @@ D:\Projects\PsychologicalGuide\PsychologicalGuide.Common\bin\Debug\Ninject.dll
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Common\bin\Debug\Ninject.xml
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Common\obj\Debug\PsychologicalGuide.Common.dll
 D:\Projects\PsychologicalGuide\PsychologicalGuide.Common\obj\Debug\PsychologicalGuide.Common.pdb
-D:\Projects\PsychologicalGuide\PsychologicalGuide.Common\obj\Debug\PsychologicalGuide.Common.csprojResolveAssemblyReference.cache

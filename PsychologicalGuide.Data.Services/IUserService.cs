@@ -12,5 +12,7 @@
         void ChangePassword(string id, string currentPassword, string newPassword);
 
         void ChangeInformation(string id, string email, string password, string role);
+
+        void Delete(string id);
     }
 }

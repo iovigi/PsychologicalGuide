@@ -232,7 +232,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administrator\AdministatorAreaRegistration.cs" />
     <Compile Include="Areas\Administrator\Controllers\AdminBaseController.cs" />
+    <Compile Include="Areas\Administrator\Controllers\ArticleAdminEditController.cs" />
     <Compile Include="Areas\Administrator\Controllers\ArticleCategoryController.cs" />
+    <Compile Include="Areas\Administrator\Controllers\CommentEditController.cs" />
     <Compile Include="Areas\Administrator\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\Administrator\Controllers\ThingsOfTheDayEditorController.cs" />
     <Compile Include="Areas\Administrator\Controllers\UsersController.cs" />
@@ -1311,6 +1313,13 @@
     <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Administrator\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Administrator\Views\Users\Edit.cshtml" />
+    <Content Include="Areas\Administrator\Views\ArticleAdminEdit\Add.cshtml" />
+    <Content Include="Areas\Administrator\Views\ArticleAdminEdit\Edit.cshtml" />
+    <Content Include="Areas\Administrator\Views\ArticleAdminEdit\Index.cshtml" />
+    <Content Include="Areas\Administrator\Views\CommentEdit\Index.cshtml" />
+    <Content Include="Areas\Administrator\Views\CommentEdit\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap-hover-dropdown.js" />
     <Content Include="Scripts\bootstrap-wysiwyg-custom.js" />
@@ -1392,7 +1401,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administrator\Views\Shared\EditorTemplates\" />
-    <Folder Include="Areas\Administrator\Views\Users\" />
     <Folder Include="Areas\Editor\Models\" />
     <Folder Include="Areas\Editor\Views\Shared\" />
     <Folder Include="Content\Admin\assets\jquery-file-upload\server\php\files\thumbnail\" />

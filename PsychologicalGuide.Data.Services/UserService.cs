@@ -31,14 +31,14 @@
 
             user.Email = email;
 
-            if (string.IsNullOrWhiteSpace(password))
+            if (!string.IsNullOrWhiteSpace(password))
             {
                 user.PasswordHash = this.passwordHasher.HashPassword(password);
             }
 
             user.Roles.Clear();
 
-            if (string.IsNullOrWhiteSpace(role))
+            if (!string.IsNullOrWhiteSpace(role))
             {
                 var roleIdentity = this.roleService.GetByName(role);
 
@@ -73,6 +73,12 @@
         public User GetById(string id)
         {
             return this.repositoryUsers.GetById(id);
+        }
+
+        public void Delete(string id)
+        {
+            this.repositoryUsers.Delete(id);
+            this.repositoryUsers.SaveChanges();
         }
     }
 }
