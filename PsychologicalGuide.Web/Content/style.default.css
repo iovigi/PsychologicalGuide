@@ -1780,7 +1780,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 
 .bar.background-image-no-fixed-2 {
-  background: url('../img/freud.jpg') center top no-repeat;
+  background: url('/img/freud.jpg') center top no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
