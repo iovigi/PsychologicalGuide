@@ -36,7 +36,8 @@ namespace PsychologicalGuide.Web
                        "~/Scripts/jquery-ui.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/Edit/js").Include(
-                "~/Scripts/ckeditor/ckeditor.js"));
+                "~/Scripts/ckeditor/ckeditor.js",
+                "~/Scripts/ckeditor/styles.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/Admin/js").Include(
                        "~/Scripts/Admin/jquery.js",
